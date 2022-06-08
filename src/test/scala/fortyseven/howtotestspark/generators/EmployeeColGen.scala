@@ -7,7 +7,7 @@ object EmployeeColGen {
 
   lazy val employeeColGens: Vector[Column] = Vector(
     firstNameColGen,
-    sureNameColGen,
+    surNameColGen,
     departmentColGen,
     managerColGen,
     enrollmentDateColGen
@@ -15,7 +15,7 @@ object EmployeeColGen {
 
   lazy val firstNameColGen: Column = new Column("firstName", anyNameGen)
 
-  lazy val sureNameColGen: Column = new Column("sureName", anyNameGen)
+  lazy val surNameColGen: Column = new Column("surName", anyNameGen)
 
   lazy val departmentColGen: Column = new Column("department", departmentGen)
 

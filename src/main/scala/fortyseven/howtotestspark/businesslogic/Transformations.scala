@@ -25,6 +25,6 @@ object Transformations {
 
    lazy val capitalizeNames: DataFrame => DataFrame = df =>
     df.withColumn("firstName", capitalize("firstName"))
-      .withColumn("sureName", capitalize("sureName"))
+      .withColumn("surName", capitalize("surName"))
 
 }

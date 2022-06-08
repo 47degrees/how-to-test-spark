@@ -15,7 +15,7 @@ class TestingSparkWithSparkTestingBase extends FunSuite with DataFrameSuiteBase 
     val capitalizedNames: DataFrame = Transformations.capitalizeNames(dataframe)
 
     assert(capitalizedNames.where(col("firstName").rlike("[A-Z]{1}[a-z]*")).count() === 4)
-    assert(capitalizedNames.where(col("sureName").rlike("[A-Z]{1}[a-z]*")).count() === 4)
+    assert(capitalizedNames.where(col("surName").rlike("[A-Z]{1}[a-z]*")).count() === 4)
   }
 
   test("Testing Assign Manager") {

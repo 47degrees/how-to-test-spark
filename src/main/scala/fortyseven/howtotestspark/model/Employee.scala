@@ -5,7 +5,7 @@ import org.apache.spark.sql.DataFrame
 
 case class Employee (
   firstName: String,
-  sureName: String,
+  surName: String,
   department: String,
   manager: String,
   enrollmentDate: String

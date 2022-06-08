@@ -24,7 +24,7 @@ class TestingWithGenerators extends FunSuite with DataFrameSuiteBase with Checke
     val capitalizedNames: Prop = Prop.forAll(employeeDfGenerator) { entryDataFrame =>
       Transformations.capitalizeNames(entryDataFrame).where(
         col("firstName").rlike("[A-Z]{1}[a-z]*") &&
-          col("sureName").rlike("[A-Z]{1}[a-z]*")
+          col("surName").rlike("[A-Z]{1}[a-z]*")
       ).count() == entryDataFrame.count()
     }
     check(capitalizedNames)
@@ -47,10 +47,6 @@ class TestingWithGenerators extends FunSuite with DataFrameSuiteBase with Checke
   test("Testing to ISO dates") {
 
     val isoDates: Prop = Prop.forAll(employeeDfGenerator) { entryDataFrame =>
-      entryDataFrame.show()
-      val exit =
-        Transformations.to_ISO8601_Date(entryDataFrame)
-      exit.show()
       Transformations.to_ISO8601_Date(entryDataFrame).where(
         col("enrollmentDate").rlike("[0-9]{4}-[0-9]{2}-[0-9]{2}")
       ).count() == entryDataFrame.count()
@@ -65,7 +61,7 @@ class TestingWithGenerators extends FunSuite with DataFrameSuiteBase with Checke
         col("manager").isin("Pierre Graz", "Luisa Garcia") &&
           col("enrollmentDate").rlike("[0-9]{4}-[0-9]{2}-[0-9]{2}") &&
           col("firstName").rlike("[A-Z]{1}[a-z]*") &&
-          col("sureName").rlike("[A-Z]{1}[a-z]*")
+          col("surName").rlike("[A-Z]{1}[a-z]*")
       ).count() === entryDataFrame.where(
         col("department").isin("Back End", "Data Science")
       ).count()
