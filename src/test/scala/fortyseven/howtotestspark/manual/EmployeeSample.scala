@@ -18,5 +18,4 @@ object EmployeeSample {
     Employee("Angela", "Costa", "Management", "Mr. CEO", "2021-12-06")
   )
 
-
 }

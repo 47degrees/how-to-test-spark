@@ -1,17 +1,15 @@
 package fortyseven.howtotestspark
 
-
 import fortyseven.howtotestspark.model.EmployeeSchema
 import org.apache.spark.SparkConf
 
 /**
-  * Use this to test the app locally, from sbt:
-  * sbt "run $inputPath/inputFile.csv $outputPath/outputFile.csv local"
-  *  (+ select EmployeeApp when prompted)
-  */
+ * Use this to test the app locally, from sbt: sbt "run $inputPath/inputFile.csv $outputPath/outputFile.csv local" (+ select EmployeeApp when
+ * prompted)
+ */
 object EmployeeApp extends App {
   val (inputCsvFile, outputCsvFile, runMode) = (args(0), args(1), args(2))
-  val conf: SparkConf = if(runMode == "local") {
+  val conf: SparkConf                        = if (runMode == "local") {
     new SparkConf()
       .setMaster("local[1]")
       .setAppName("my awesome app")

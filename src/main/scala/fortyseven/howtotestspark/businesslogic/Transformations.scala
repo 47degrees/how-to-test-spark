@@ -8,8 +8,9 @@ object Transformations {
 
   lazy val capitalize: String => Column = columnName => initcap(lower(col(columnName)))
 
-  lazy val assignManager: DataFrame => DataFrame = df =>
-    df.withColumn("manager",
+  lazy val assignManager: DataFrame => DataFrame   = df =>
+    df.withColumn(
+      "manager",
       when(col("department") === lit("Back End"), lit("Pierre Graz"))
         .otherwise(
           when(col("department") === lit("Data Science"), lit("Luisa Garcia"))
@@ -19,11 +20,12 @@ object Transformations {
         )
     )
   lazy val to_ISO8601_Date: DataFrame => DataFrame = df =>
-    df.withColumn("enrollmentDate",
-      when(col("enrollmentDate") === lit(""), lit("")
-      ).otherwise(to_date(col("enrollmentDate"), "MMddyyyy").cast(StringType)))
+    df.withColumn(
+      "enrollmentDate",
+      when(col("enrollmentDate") === lit(""), lit("")).otherwise(to_date(col("enrollmentDate"), "MMddyyyy").cast(StringType))
+    )
 
-   lazy val capitalizeNames: DataFrame => DataFrame = df =>
+  lazy val capitalizeNames: DataFrame => DataFrame = df =>
     df.withColumn("firstName", capitalize("firstName"))
       .withColumn("surName", capitalize("surName"))
 
