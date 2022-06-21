@@ -27,7 +27,9 @@ lazy val root = (project in file(".")).
 
       "org.scalatest" %% "scalatest" % "3.0.9" % "test",
       "org.scalacheck" %% "scalacheck" % "1.15.2" % "test",
-      "com.holdenkarau" %% "spark-testing-base" % "3.2.0_1.1.1" % "test" 
+      "com.holdenkarau" %% "spark-testing-base" % "3.2.0_1.1.1" % "test",
+      "io.estatico" %% "newtype" % "0.4.4",
+      "org.hablapps" % "doric_3-2_2.12" % "0.0.4"
     ),
 
     // uses compile classpath for the run task, including "provided" jar (cf http://stackoverflow.com/a/21803413/3827)
@@ -54,3 +56,4 @@ lazy val root = (project in file(".")).
         Some("releases"  at nexus + "service/local/staging/deploy/maven2")
     }
   )
+addCompilerPlugin("org.scalamacros" % "paradise" % "2.1.1" cross CrossVersion.full)

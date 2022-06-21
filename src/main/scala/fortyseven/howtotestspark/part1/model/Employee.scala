@@ -1,6 +1,6 @@
-package fortyseven.howtotestspark.model
+package fortyseven.howtotestspark.part1.model
 
-import fortyseven.howtotestspark.businesslogic.{Combinator, Transformations}
+import fortyseven.howtotestspark.part1.businesslogic.{Combinator, Transformations}
 import org.apache.spark.sql.DataFrame
 
 case class Employee (

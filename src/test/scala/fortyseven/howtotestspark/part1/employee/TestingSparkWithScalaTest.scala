@@ -1,7 +1,7 @@
-package fortyseven.howtotestspark.employee
+package fortyseven.howtotestspark.part1.employee
 
-import fortyseven.howtotestspark.businesslogic.Transformations
 import fortyseven.howtotestspark.manual.EmployeeSample
+import fortyseven.howtotestspark.part1.businesslogic.Transformations
 import org.apache.spark.sql.functions.{col, lit}
 import org.apache.spark.sql.{DataFrame, SparkSession}
 import org.scalatest.{BeforeAndAfterAll, FunSuite}

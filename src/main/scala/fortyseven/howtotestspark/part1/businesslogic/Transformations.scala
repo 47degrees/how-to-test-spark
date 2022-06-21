@@ -1,4 +1,4 @@
-package fortyseven.howtotestspark.businesslogic
+package fortyseven.howtotestspark.part1.businesslogic
 
 import org.apache.spark.sql.{Column, DataFrame}
 import org.apache.spark.sql.functions.{col, initcap, lit, lower, to_date, when}

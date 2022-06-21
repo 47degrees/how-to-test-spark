@@ -1,9 +1,9 @@
-package fortyseven.howtotestspark.employee
+package fortyseven.howtotestspark.part1.employee
 
 import com.holdenkarau.spark.testing.DataFrameSuiteBase
-import fortyseven.howtotestspark.businesslogic.Transformations
 import fortyseven.howtotestspark.manual.EmployeeSample
-import fortyseven.howtotestspark.model.Employee
+import fortyseven.howtotestspark.part1.businesslogic.Transformations
+import fortyseven.howtotestspark.part1.model.Employee
 import org.apache.spark.sql.DataFrame
 import org.apache.spark.sql.functions.{col, lit}
 import org.scalatest.FunSuite

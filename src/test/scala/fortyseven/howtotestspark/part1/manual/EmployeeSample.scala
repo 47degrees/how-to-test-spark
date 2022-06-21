@@ -1,14 +1,14 @@
 package fortyseven.howtotestspark.manual
 
-import fortyseven.howtotestspark.model.Employee
+import fortyseven.howtotestspark.part1.model.Employee
 
 object EmployeeSample {
 
   lazy val entryData: Seq[Employee] = Vector(
     Employee("Ryan", "Wilson", "Back End", "", "01312019"),
-    Employee("Lexy", "Smith", "Data Science", "", "02282018"),
-    Employee("Marlow", "Perez", "Sales", "", "05132020"),
-    Employee("Angela", "Costa", "Management", "", "12062021")
+    Employee("lexy", "Smith", "Data Science", "", "02282018"),
+    Employee("marlow", "perez", "Sales", "", "05132020"),
+    Employee("Angela", "costa", "Management", "", "12062021")
   )
 
   lazy val expectedExit: Seq[Employee] = Vector(

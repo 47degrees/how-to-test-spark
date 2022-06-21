@@ -1,4 +1,4 @@
-package fortyseven.howtotestspark.generators
+package fortyseven.howtotestspark.part1.generators
 
 import java.time.format.DateTimeFormatter
 import org.scalacheck.Gen

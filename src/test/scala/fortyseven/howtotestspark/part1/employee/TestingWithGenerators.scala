@@ -1,9 +1,9 @@
-package fortyseven.howtotestspark.employee
+package fortyseven.howtotestspark.part1.employee
 
 import com.holdenkarau.spark.testing._
-import fortyseven.howtotestspark.businesslogic.Transformations
-import fortyseven.howtotestspark.generators.EmployeeColGen
-import fortyseven.howtotestspark.model.{Employee, EmployeeSchema}
+import fortyseven.howtotestspark.part1.businesslogic.Transformations
+import fortyseven.howtotestspark.part1.model.{Employee, EmployeeSchema}
+import fortyseven.howtotestspark.part1.generators.EmployeeColGen
 import org.apache.spark.sql.DataFrame
 import org.apache.spark.sql.functions.col
 import org.apache.spark.sql.types.StructType
@@ -17,7 +17,8 @@ class TestingWithGenerators extends FunSuite with DataFrameSuiteBase with Checke
     DataframeGenerator.arbitraryDataFrameWithCustomFields(
       spark.sqlContext, schema, 1
     )(customGenerators:_*)
-  def employeeDfGenerator: Gen[DataFrame] = generateCustomDF(EmployeeSchema.schema, EmployeeColGen.employeeColGens).arbitrary
+  def employeeDfGenerator: Gen[DataFrame] = generateCustomDF(EmployeeSchema.schema,
+    EmployeeColGen.employeeColGens).arbitrary
 
 
   test("Testing capitalized names") {

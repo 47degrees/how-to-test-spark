@@ -1,4 +1,4 @@
-package fortyseven.howtotestspark.model
+package fortyseven.howtotestspark.part1.model
 
 import org.apache.spark.sql.types._
 
