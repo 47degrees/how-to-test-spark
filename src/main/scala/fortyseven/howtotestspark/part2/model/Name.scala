@@ -1,3 +1,8 @@
 package fortyseven.howtotestspark.part2.model
 
-case class Name (value: String)
+trait Name {
+  val value: String
+}
+
+case class FirstName(value: String) extends Name
+case class SurName(value: String) extends Name

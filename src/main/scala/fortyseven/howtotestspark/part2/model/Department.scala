@@ -1,9 +1,9 @@
 package fortyseven.howtotestspark.part2.model
 
 sealed case class Department(value: String)
-object BackEnd extends Department("Back End")
-object DataScience extends Department("Data Science")
-object Sales extends Department("Sales")
-object Management extends Department("Management")
-object FrontEnd extends Department("Front End")
-object DataEngineering extends Department("Data Engineering")
+object BackEnd extends Department(BACK_END)
+object DataScience extends Department(DATA_SCIENCE)
+object Sales extends Department(SALES)
+object Management extends Department(MANAGEMENT)
+object FrontEnd extends Department(FRONT_END)
+object DataEngineering extends Department(DATA_ENGINEERING)
