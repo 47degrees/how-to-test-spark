@@ -1,5 +1,7 @@
 package fortyseven.howtotestspark.part2.model
 
+import fortyseven.howtotestspark._
+
 sealed case class Department(value: String)
 object BackEnd extends Department(BACK_END)
 object DataScience extends Department(DATA_SCIENCE)

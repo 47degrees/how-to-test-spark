@@ -1,10 +1,10 @@
 package fortyseven.howtotestspark.part2.businesslogic
 
 import com.holdenkarau.spark.testing.DataFrameSuiteBase
+import fortyseven.howtotestspark._
+import fortyseven.howtotestspark.part2.businesslogic.DoricTransformations._
 import org.apache.spark.sql.DataFrame
 import org.scalatest.FunSuite
-import fortyseven.howtotestspark.part2.businesslogic.DoricTransformations._
-import fortyseven.howtotestspark.part2.model.{BACK_END, DATA_ENGINEERING, DATA_SCIENCE, FRONT_END, MANAGEMENT, SALES}
 
 class DoricTransformationsTest extends FunSuite with DataFrameSuiteBase {
 

@@ -1,8 +1,8 @@
 package fortyseven.howtotestspark.part1.businesslogic
 
-import org.apache.spark.sql.{Column, DataFrame}
-import org.apache.spark.sql.functions.{col, initcap, lit, lower, to_date, when}
+import org.apache.spark.sql.functions._
 import org.apache.spark.sql.types.StringType
+import org.apache.spark.sql.{Column, DataFrame}
 
 object Transformations {
 

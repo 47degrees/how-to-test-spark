@@ -1,5 +1,7 @@
 package fortyseven.howtotestspark.part2.model
 
+import fortyseven.howtotestspark._
+
 sealed case class Manager (value: String)
 object DataScienceManager extends Manager(LUISA_GARCIA)
 object DataEngineeringManager extends Manager(LUISA_GARCIA)

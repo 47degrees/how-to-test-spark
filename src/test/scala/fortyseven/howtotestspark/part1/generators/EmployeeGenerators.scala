@@ -1,8 +1,9 @@
 package fortyseven.howtotestspark.part1.generators
 
-import java.time.format.DateTimeFormatter
 import org.scalacheck.Gen
+
 import java.time.Month._
+import java.time.format.DateTimeFormatter
 import java.time.{LocalDate, Year}
 
 object EmployeeGenerators {

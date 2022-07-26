@@ -1,5 +1,5 @@
 firstName,surName,department,manager,enrollmentDate
 harry,johnson,Back End,John Smith,05012021
 sylvia,roth,Data Science,John Smith,08012017
-Greg,Thomas,Sales,John Smith,02282001
+Greg,Thomas ,Sales,John Smith,02282001
 Pamela,Griffin,Management,John Smith,12062010

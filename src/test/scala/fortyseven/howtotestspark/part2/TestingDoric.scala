@@ -1,14 +1,9 @@
 package fortyseven.howtotestspark.part2
 
 import com.holdenkarau.spark.testing.DataFrameSuiteBase
+import doric._
+import fortyseven.howtotestspark.part2.model._
 import org.scalatest.FunSuite
-import doric._
-import doric._
-import doric.syntax._
-import doric.types.SparkType
-import fortyseven.howtotestspark.part2.model.{BackEnd, BackEndManager, DATA_SCIENCE, DataEngineering, DataEngineeringManager, DataScience, DataScienceManager, FrontEndManager, Manager, OtherDepartments, Sales}
-import org.apache.spark.sql.types.{DataType, StringType}
-
 
 class TestingDoric extends FunSuite with DataFrameSuiteBase {
 

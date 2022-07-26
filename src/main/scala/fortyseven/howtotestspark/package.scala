@@ -1,7 +1,6 @@
-package fortyseven.howtotestspark.part3
+package fortyseven
 
-package object model {
-
+package object howtotestspark {
   // Departments
   val BACK_END: String = "Back End"
   val DATA_SCIENCE: String = "Data Science"
@@ -14,5 +13,4 @@ package object model {
   val LUISA_GARCIA: String = "Luisa Garcia"
   val PIERRE_GRAZ: String = "Pierre Graz"
   val MR_CEO: String = "Mr. CEO"
-
 }

@@ -1,7 +1,7 @@
 package fortyseven.howtotestspark.part3.arbitrary
 
 import com.holdenkarau.spark.testing.Column
-import Implicits._
+import fortyseven.howtotestspark.part3.arbitrary.Implicits._
 import fortyseven.howtotestspark.part3.model._
 import org.scalacheck.Arbitrary
 

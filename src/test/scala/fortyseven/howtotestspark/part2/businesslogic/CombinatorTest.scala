@@ -1,9 +1,9 @@
 package fortyseven.howtotestspark.part2.businesslogic
 
-import com.holdenkarau.spark.testing.{DataFrameSuiteBase, DataframeGenerator}
-import org.scalatest.FunSuite
+import com.holdenkarau.spark.testing.DataFrameSuiteBase
 import fortyseven.howtotestspark.part2.businesslogic.DoricTransformations._
 import org.apache.spark.sql.DataFrame
+import org.scalatest.FunSuite
 
 
 class CombinatorTest extends FunSuite with DataFrameSuiteBase {

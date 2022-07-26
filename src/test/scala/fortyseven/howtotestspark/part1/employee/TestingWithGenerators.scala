@@ -2,8 +2,8 @@ package fortyseven.howtotestspark.part1.employee
 
 import com.holdenkarau.spark.testing._
 import fortyseven.howtotestspark.part1.businesslogic.Transformations
-import fortyseven.howtotestspark.part1.model.{Employee, EmployeeSchema}
 import fortyseven.howtotestspark.part1.generators.EmployeeColGen
+import fortyseven.howtotestspark.part1.model.{Employee, EmployeeSchema}
 import org.apache.spark.sql.DataFrame
 import org.apache.spark.sql.functions.col
 import org.apache.spark.sql.types.StructType

@@ -1,17 +1,15 @@
 package fortyseven.howtotestspark.part3
 
-import com.holdenkarau.spark.testing.{Column, DataFrameSuiteBase, DataframeGenerator}
+import com.holdenkarau.spark.testing._
 import fortyseven.howtotestspark.part1.businesslogic.{Combinator, Transformations}
-import fortyseven.howtotestspark.part3.model.{Employee, Manager}
-import org.scalacheck.{Arbitrary, Gen, Prop}
-import org.scalatest.FunSuite
-import org.scalatestplus.scalacheck.Checkers
 import fortyseven.howtotestspark.part1.model.EmployeeSchema
 import fortyseven.howtotestspark.part3.arbitrary.ArbitraryColumns
 import org.apache.spark.sql.DataFrame
 import org.apache.spark.sql.types.StructType
 import org.scalacheck.Prop.passed
-import arbitrary.Implicits._
+import org.scalacheck.{Arbitrary, Prop}
+import org.scalatest.FunSuite
+import org.scalatestplus.scalacheck.Checkers
 
 class TestingWithShapeless extends FunSuite with DataFrameSuiteBase with Checkers {
 

@@ -1,7 +1,7 @@
 package fortyseven.howtotestspark.part1.generators
 
 import com.holdenkarau.spark.testing.Column
-import fortyseven.howtotestspark.part1.generators.EmployeeGenerators.{anyNameGen, departmentGen, enrollmentDateGen, managerGen}
+import fortyseven.howtotestspark.part1.generators.EmployeeGenerators._
 
 object EmployeeColGen {
 

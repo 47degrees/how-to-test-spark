@@ -1,12 +1,12 @@
 package fortyseven.howtotestspark.part3.arbitrary
 
 
-import fortyseven.howtotestspark.part3.model.{BackEnd, DataEngineering, DataScience, Department, Employee, FrontEnd, Management, Manager, Name, OtherDepartments, Sales}
+import fortyseven.howtotestspark.part3.model._
 import org.scalacheck.{Arbitrary, Gen}
 
-import java.time.Month.{APRIL, AUGUST, DECEMBER, FEBRUARY, JANUARY, JULY, JUNE, MARCH, MAY, NOVEMBER, OCTOBER, SEPTEMBER}
-import java.time.{LocalDate, Year}
+import java.time.Month._
 import java.time.format.DateTimeFormatter
+import java.time.{LocalDate, Year}
 
 
 object Implicits {

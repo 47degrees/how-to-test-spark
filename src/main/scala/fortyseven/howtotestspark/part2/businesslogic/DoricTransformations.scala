@@ -1,8 +1,9 @@
 package fortyseven.howtotestspark.part2.businesslogic
 
-import fortyseven.howtotestspark.part2.model.{BackEnd, BackEndManager, DataEngineering, DataEngineeringManager, DataScience, DataScienceManager, Department, FrontEnd, FrontEndManager, MR_CEO, Manager, OtherDepartments}
-import org.apache.spark.sql.DataFrame
 import doric._
+import fortyseven.howtotestspark.MR_CEO
+import fortyseven.howtotestspark.part2.model._
+import org.apache.spark.sql.DataFrame
 
 object DoricTransformations {
 
