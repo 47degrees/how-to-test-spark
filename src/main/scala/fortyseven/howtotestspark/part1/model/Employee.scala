@@ -1,14 +1,15 @@
 package fortyseven.howtotestspark.part1.model
 
-import fortyseven.howtotestspark.part1.businesslogic.{Combinator, Transformations}
+import fortyseven.howtotestspark.Combinator
+import fortyseven.howtotestspark.part1.businesslogic.Transformations
 import org.apache.spark.sql.DataFrame
 
 case class Employee (
-  firstName: String,
-  surName: String,
+  first_name: String,
+  sur_name: String,
   department: String,
   manager: String,
-  enrollmentDate: String
+  enrollment_date: String
 )
 
 object Employee {

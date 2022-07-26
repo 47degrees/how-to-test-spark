@@ -1,4 +1,4 @@
-firstName,surName,department,manager,enrollmentDate
+first_name,sur_name,department,manager,enrollment_date
 harry,johnson,Back End,John Smith,05012021
 sylvia,roth,Data Science,John Smith,08012017
 Greg,Thomas ,Sales,John Smith,02282001

@@ -1,7 +1,8 @@
 package fortyseven.howtotestspark.part3
 
 import com.holdenkarau.spark.testing._
-import fortyseven.howtotestspark.part1.businesslogic.{Combinator, Transformations}
+import fortyseven.howtotestspark.Combinator
+import fortyseven.howtotestspark.part1.businesslogic.Transformations
 import fortyseven.howtotestspark.part1.model.EmployeeSchema
 import fortyseven.howtotestspark.part3.arbitrary.ArbitraryColumns
 import org.apache.spark.sql.DataFrame
@@ -43,7 +44,7 @@ class TestingWithShapeless extends FunSuite with DataFrameSuiteBase with Checker
  //}
 
 
-  test("Spark"){
+  ignore("Spark"){
 
     val property: Prop = Prop.forAll(employeeDfGenerator.arbitrary){
       df =>

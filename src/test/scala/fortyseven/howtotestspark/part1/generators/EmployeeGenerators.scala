@@ -5,6 +5,7 @@ import org.scalacheck.Gen
 import java.time.Month._
 import java.time.format.DateTimeFormatter
 import java.time.{LocalDate, Year}
+import fortyseven.howtotestspark._
 
 object EmployeeGenerators {
 
@@ -14,13 +15,15 @@ object EmployeeGenerators {
     } yield charList.mkString
 
   def departmentGen: Gen[String] = Gen.oneOf(Vector(
-    "Back End",
-    "Data Science",
-    "Sales",
-    "Management"
+    BACK_END,
+    FRONT_END,
+    DATA_SCIENCE,
+    DATA_ENGINEERING,
+    SALES,
+    MANAGEMENT
   ))
 
-  def managerGen: Gen[String] = Gen.const("Mr. CEO")
+  def managerGen: Gen[String] = Gen.const(MR_CEO)
 
   def enrollmentDateGen: Gen[String] = {
     val americanFormat: DateTimeFormatter = DateTimeFormatter.ofPattern("MMddyyyy")

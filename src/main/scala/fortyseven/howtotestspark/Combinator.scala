@@ -1,4 +1,4 @@
-package fortyseven.howtotestspark.part2.businesslogic
+package fortyseven.howtotestspark
 
 import org.apache.spark.sql.DataFrame
 

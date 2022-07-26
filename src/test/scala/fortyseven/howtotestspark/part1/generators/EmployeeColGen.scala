@@ -2,6 +2,7 @@ package fortyseven.howtotestspark.part1.generators
 
 import com.holdenkarau.spark.testing.Column
 import fortyseven.howtotestspark.part1.generators.EmployeeGenerators._
+import fortyseven.howtotestspark._
 
 object EmployeeColGen {
 
@@ -13,14 +14,14 @@ object EmployeeColGen {
     enrollmentDateColGen
   )
 
-  lazy val firstNameColGen: Column = new Column("firstName", anyNameGen)
+  lazy val firstNameColGen: Column = new Column(FIRST_NAME, anyNameGen)
 
-  lazy val surNameColGen: Column = new Column("surName", anyNameGen)
+  lazy val surNameColGen: Column = new Column(SUR_NAME, anyNameGen)
 
-  lazy val departmentColGen: Column = new Column("department", departmentGen)
+  lazy val departmentColGen: Column = new Column(DEPARTMENT, departmentGen)
 
-  lazy val managerColGen: Column = new Column("manager", managerGen)
+  lazy val managerColGen: Column = new Column(MANAGER, managerGen)
 
-  lazy val enrollmentDateColGen: Column = new Column("enrollmentDate", enrollmentDateGen)
+  lazy val enrollmentDateColGen: Column = new Column(ENROLLMENT_DATE, enrollmentDateGen)
 
 }

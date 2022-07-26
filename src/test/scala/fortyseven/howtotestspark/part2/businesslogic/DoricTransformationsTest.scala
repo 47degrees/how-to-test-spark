@@ -11,14 +11,12 @@ class DoricTransformationsTest extends FunSuite with DataFrameSuiteBase {
   import spark.implicits._
   test("testTo_ISO8601_Date") {
     val inputDF: DataFrame = {
-      Seq("05012021", "12012022", "12312020", "").toDF("enrollmentDate")
+      Seq("05012021", "12012022", "12312020", "").toDF(ENROLLMENT_DATE)
     }
     val result: DataFrame = to_ISO8601_Date(inputDF)
 
-    result.show()
-
     val inputDF2: DataFrame = {
-      Seq(15012021, 12012022, 12312020).toDF("enrollmentDate")
+      Seq(15012021, 12012022, 12312020).toDF(ENROLLMENT_DATE)
     }
     inputDF2.printSchema(3)
     assertThrows[doric.sem.DoricMultiError](to_ISO8601_Date(inputDF2))
@@ -36,7 +34,7 @@ class DoricTransformationsTest extends FunSuite with DataFrameSuiteBase {
         (DATA_ENGINEERING, "Mary SmithSon"),
         (SALES, ""),
         (MANAGEMENT, "Pierre Graz")
-      ).toDF("department", "manager")
+      ).toDF(DEPARTMENT, MANAGER)
     }
     val result: DataFrame = assignManager(inputDF)
 
@@ -54,7 +52,7 @@ class DoricTransformationsTest extends FunSuite with DataFrameSuiteBase {
         ("PATRICK", "SHEEN"),
         ("Lucy", "Ray"),
         ("rob", "Man")
-      ).toDF("firstName", "surName")
+      ).toDF(FIRST_NAME, SUR_NAME)
     }
 
     val result = capitalizeNames(df)

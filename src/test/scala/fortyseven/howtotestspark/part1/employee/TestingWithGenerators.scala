@@ -1,6 +1,7 @@
 package fortyseven.howtotestspark.part1.employee
 
 import com.holdenkarau.spark.testing._
+import fortyseven.howtotestspark._
 import fortyseven.howtotestspark.part1.businesslogic.Transformations
 import fortyseven.howtotestspark.part1.generators.EmployeeColGen
 import fortyseven.howtotestspark.part1.model.{Employee, EmployeeSchema}
@@ -24,8 +25,8 @@ class TestingWithGenerators extends FunSuite with DataFrameSuiteBase with Checke
   test("Testing capitalized names") {
     val capitalizedNames: Prop = Prop.forAll(employeeDfGenerator) { entryDataFrame =>
       Transformations.capitalizeNames(entryDataFrame).where(
-        col("firstName").rlike("[A-Z]{1}[a-z]*") &&
-          col("surName").rlike("[A-Z]{1}[a-z]*")
+        col(FIRST_NAME).rlike("[A-Z]{1}[a-z]*") &&
+          col(SUR_NAME).rlike("[A-Z]{1}[a-z]*")
       ).count() == entryDataFrame.count()
     }
     check(capitalizedNames)
@@ -36,9 +37,9 @@ class TestingWithGenerators extends FunSuite with DataFrameSuiteBase with Checke
     val assigningManager: Prop = Prop.forAll(employeeDfGenerator) { entryDataFrame =>
 
       Transformations.assignManager(entryDataFrame).where(
-        col("manager").isin("Pierre Graz", "Luisa Garcia")
+        col(MANAGER).isin(PIERRE_GRAZ, LUISA_GARCIA)
         ).count() === entryDataFrame.where(
-        col("department").isin("Back End", "Data Science")
+        col(DEPARTMENT).isin(BACK_END, DATA_SCIENCE)
       ).count()
     }
 
@@ -49,7 +50,7 @@ class TestingWithGenerators extends FunSuite with DataFrameSuiteBase with Checke
 
     val isoDates: Prop = Prop.forAll(employeeDfGenerator) { entryDataFrame =>
       Transformations.to_ISO8601_Date(entryDataFrame).where(
-        col("enrollmentDate").rlike("[0-9]{4}-[0-9]{2}-[0-9]{2}")
+        col(ENROLLMENT_DATE).rlike("[0-9]{4}-[0-9]{2}-[0-9]{2}")
       ).count() == entryDataFrame.count()
     }
     check(isoDates)
@@ -59,12 +60,12 @@ class TestingWithGenerators extends FunSuite with DataFrameSuiteBase with Checke
 
     val employeeLogic: Prop = Prop.forAll(employeeDfGenerator) { entryDataFrame =>
       Employee.applyTransformations(entryDataFrame).where(
-        col("manager").isin("Pierre Graz", "Luisa Garcia") &&
-          col("enrollmentDate").rlike("[0-9]{4}-[0-9]{2}-[0-9]{2}") &&
-          col("firstName").rlike("[A-Z]{1}[a-z]*") &&
-          col("surName").rlike("[A-Z]{1}[a-z]*")
+        col(MANAGER).isin(PIERRE_GRAZ, LUISA_GARCIA) &&
+          col(ENROLLMENT_DATE).rlike("[0-9]{4}-[0-9]{2}-[0-9]{2}") &&
+          col(FIRST_NAME).rlike("[A-Z]{1}[a-z]*") &&
+          col(SUR_NAME).rlike("[A-Z]{1}[a-z]*")
       ).count() === entryDataFrame.where(
-        col("department").isin("Back End", "Data Science")
+        col(DEPARTMENT).isin(BACK_END, DATA_SCIENCE)
       ).count()
     }
 

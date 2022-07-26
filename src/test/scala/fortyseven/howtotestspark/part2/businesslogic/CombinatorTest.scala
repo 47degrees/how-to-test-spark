@@ -1,6 +1,7 @@
 package fortyseven.howtotestspark.part2.businesslogic
 
 import com.holdenkarau.spark.testing.DataFrameSuiteBase
+import fortyseven.howtotestspark.Combinator
 import fortyseven.howtotestspark.part2.businesslogic.DoricTransformations._
 import org.apache.spark.sql.DataFrame
 import org.scalatest.FunSuite
@@ -13,8 +14,8 @@ class CombinatorTest extends FunSuite with DataFrameSuiteBase {
 
     val df = spark.read.options(Map("header"-> "true", "delimiter"->",", "inferSchema"->"false"))
       .csv("src/test/resources/input/entryEmployee.csv")
-    df.show()
-    Combinator.combineTransformations(df, transformations).show()
+
+    Combinator.combineTransformations(df, transformations)
   }
 
 }
