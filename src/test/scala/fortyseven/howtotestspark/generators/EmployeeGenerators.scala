@@ -1,4 +1,4 @@
-package fortyseven.howtotestspark.part1.generators
+package fortyseven.howtotestspark.generators
 
 import org.scalacheck.Gen
 
